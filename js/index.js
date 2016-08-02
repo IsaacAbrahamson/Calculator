@@ -50,9 +50,15 @@ var operators = document.querySelectorAll('.operator');
 for (var i = 0; i < operators.length; i++) {
   operators[i].onclick = function(event) {
     operator = this.id;
-    firstNum = parseFloat(current);
-    current = '0';
-    displayCurrent();
+    if (firstNum !== 0) {
+      firstNum = operateIt[operator](firstNum, parseFloat(current));
+      current = '0';
+      displayCurrent();
+    } else {
+      firstNum = parseFloat(current);
+      current = '0';
+      displayCurrent();
+    }
   }
 }
 
