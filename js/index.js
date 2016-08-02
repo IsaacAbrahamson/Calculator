@@ -62,7 +62,13 @@ for (var i = 0; i < calcBtns.length; i++) {
     if (checkLimit()) {
       return;
     }
+
     var value = this.id;
+    
+    if (value === '.' && current.indexOf('.') > -1) {
+       return;
+     }
+
     if (current === '0') {
       current = value;
     } else {
