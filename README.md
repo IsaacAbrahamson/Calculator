@@ -1,2 +1,5 @@
 # Calculator
-View live at https://isaacabrahamson.github.io/Calculator
+https://calculator.iabrahamson.com/
+
+## About
+Simple calculator app built in 2016.
